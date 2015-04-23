@@ -8,32 +8,9 @@ set softtabstop=4           " 使得按退格键时可以一次删掉 4 个空�
 set tabstop=4               " 设定 tab 长度为 4
 set nowrap                  " 自动换行显示
 syntax on                   " 自动语法高亮
+filetype plugin indent on
 
-map <F8> gg=G
 map <F12> <Esc>:Dox<cr>
 let g:DoxygenToolkit_briefTag_pre=""
 let g:DoxygenToolkit_paramTag_pre="@Param "
-let g:DoxygenToolkit_returnTag=""
-
-set nocompatible                " be iMproved
-filetype off                    " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
-"my Bundle here:
-"
-" original repos on github
-Bundle 'majutsushi/tagbar'
-" Bundle 'Lokaltog/vim-powerline'
-"..................................
-" vim-scripts repos
-"..................................
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
-"......................................
-filetype plugin indent on
-
-nmap <F9> :TagbarToggle<CR>
+let g:DoxygenToolkit_returnTag="@Return "
